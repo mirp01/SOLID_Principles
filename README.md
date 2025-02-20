@@ -7,3 +7,8 @@
 ## 3. Gestión de Envíos y Seguimiento de Paquetes
 
 <img src="./3.jpg" alt="UML Diagram 3" width=750 height=400>
+
+
+## 5. Sistema de Vehículos
+
+<img src="./5_TransportService.PNG" alt="UML Diagram 5" width=750 height=400>
