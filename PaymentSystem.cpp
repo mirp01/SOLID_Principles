@@ -11,12 +11,12 @@ class PaymentMethod{
 
 // Superclase
 
-class PaymentSystem {
+class PaymentSystem{
     public:
         // Constructor, recibe un método de pago
         PaymentSystem(PaymentMethod* method) : paymentMethod(method) {}
 
-        void processPayment(string userInfo) {
+        void processPayment(string userInfo){
             paymentMethod->pay(userInfo);
         }
     
