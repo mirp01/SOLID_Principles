@@ -6,7 +6,7 @@
 
 ## 2.- Sistema de pagos
 
-<img src="./SistemaDePagos.drawio.png" alt="UML Diagram 2" width=750 height=400>
+<img src="./SistemaDePagos.drawio.png" alt="UML Diagram 2" height=400>
 
 ## 3. Gestión de Envíos y Seguimiento de Paquetes
 
