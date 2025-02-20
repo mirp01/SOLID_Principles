@@ -1,6 +1,14 @@
 #include <iostream>
 using namespace std;
 
+// Interfaz de pago
+
+class PaymentMethod{
+    public:
+        virtual void pay(string) = 0;
+        virtual ~PaymentMethod() = default;
+};
+
 // Superclase
 
 class PaymentSystem {
@@ -8,20 +16,12 @@ class PaymentSystem {
         // Constructor, recibe un método de pago
         PaymentSystem(PaymentMethod* method) : paymentMethod(method) {}
 
-        void processPayment(string& userInfo) {
+        void processPayment(string userInfo) {
             paymentMethod->pay(userInfo);
         }
     
     private:
         PaymentMethod* paymentMethod;
-};
-
-// Interfaz de pago
-
-class PaymentMethod{
-    public:
-        virtual void pay(string) = 0;
-        virtual ~PaymentMethod() = default;
 };
 
 // Implementación en otras clases
@@ -41,5 +41,13 @@ class CreditCard: public PaymentMethod{
 };
 
 int main(){
+    // Si selecciona PayPal
+    Paypal paypal;
+    PaymentSystem system1(&paypal);
+    system1.processPayment("hola@gmail.com");
 
+    // Si selecciona tarjeta de crédito
+    CreditCard creditCard;
+    PaymentSystem system2(&creditCard);
+    system2.processPayment("1234-5678-9"); 
 }
