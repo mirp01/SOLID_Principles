@@ -3,6 +3,7 @@
     Programa que utiliza el Principio Abierto/Cerrado (OCP) para permitir agregar nuevos tipos de descuentos sin alterar el código existente 
     y el Principio de Responsabilidad Única (SRP) para que cada tipo de descuento se encarga de su propio cálculo. 
 """
+from abc import ABC, abstractmethod
 
 #Clase PaymentProcessor
 class PaymentProcessor():
@@ -15,6 +16,7 @@ class PaymentProcessor():
 
 #Interfaz de descuento
 class Discount():
+    @abstractmethod
     def apply_discount(self, amount):
         return amount
 
